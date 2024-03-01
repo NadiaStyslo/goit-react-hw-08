@@ -1,0 +1,26 @@
+.search{
+    margin-top: 25px;
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: rgb(78, 11, 58);
+        margin: 25px;
+        width: auto;
+        border: 1px solid #111;
+        max-width: 400px;
+        position: relative;
+        height: 100px;
+}
+.user{
+font-size: 25px;
+    height: 40px;
+}
+.input{
+position: absolute;
+left:18%;
+    
+    transform: translateY(97%);
+    padding: 10px;
+        width: 250px;
+        border: 1px solid #111;
+}
