@@ -9,9 +9,10 @@ export const ContactList = () => {
   const filterName = useSelector((state) => state.filter.name);
   const dispatch = useDispatch();
 
-  const filterUser = filterItems.filter((user) =>
-    user.name.toLowerCase().includes(filterName.toLowerCase())
+  const filterUser = filterItems.filter((item) =>
+    item.name.toLowerCase().includes(filterName.toLowerCase())
   );
+
   // if (!filterUser || filterUser.length === 0) {
   //   return <div>No contacts</div>;
   // }
