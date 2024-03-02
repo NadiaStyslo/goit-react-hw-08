@@ -6,15 +6,15 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export const ContactList = () => {
   const filterItems = useSelector((state) => state.contacts.item);
-  const filterName = useSelector((state) => state.filters.name);
+  const filterName = useSelector((state) => state.filter.name);
   const dispatch = useDispatch();
 
   const filterUser = filterItems.filter((user) =>
     user.name.toLowerCase().includes(filterName.toLowerCase())
   );
-  if (!filterUser || filterUser.length === 0) {
-    return <div>No contacts</div>;
-  }
+  // if (!filterUser || filterUser.length === 0) {
+  //   return <div>No contacts</div>;
+  // }
   return (
     <div>
       <ul className={css.contact}>
