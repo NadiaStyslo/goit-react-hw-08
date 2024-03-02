@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 import { FaAddressBook, FaMobileAlt } from 'react-icons/fa';
 
 import { addContact } from '../../redux/contactsSlice';
-import { UseDispatch, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const userSchema = Yup.object().shape({
   name: Yup.string()
@@ -21,7 +21,7 @@ const userSchema = Yup.object().shape({
 const ContactForm = () => {
   const nameFieldId = useId();
   const numberFieldId = useId();
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   return (
     <Formik
@@ -31,8 +31,10 @@ const ContactForm = () => {
       }}
       validationSchema={userSchema}
       onSubmit={(values, actions) => {
-        onAdd({ id: nanoid(), ...values });
+        dispatch(addContact({ id: nanoid(), ...values }));
         actions.resetForm();
+        // onAdd({ id: nanoid(), ...values });
+        // actions.resetForm();
       }}
     >
       <Form className={css.contact}>
