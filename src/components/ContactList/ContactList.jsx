@@ -13,9 +13,9 @@ export const ContactList = () => {
     item.name.toLowerCase().includes(filterName.toLowerCase())
   );
 
-  // if (!filterUser || filterUser.length === 0) {
-  //   return <div>No contacts</div>;
-  // }
+  if (!filterUser || filterUser.length === 0) {
+    return <div className={css.user}>No contacts</div>;
+  }
   return (
     <div>
       <ul className={css.contact}>

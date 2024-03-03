@@ -1,8 +1,11 @@
 .contact {
-
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.user {
+  font-size: 25px;
+  height: 40px;
+  margin: 25px;
 }
