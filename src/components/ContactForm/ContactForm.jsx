@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import { FaAddressBook, FaMobileAlt } from 'react-icons/fa';
 
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactSlice';
 import { useDispatch } from 'react-redux';
 
 const userSchema = Yup.object().shape({
