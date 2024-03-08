@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import persistReducer from 'redux-persist/es/persistReducer';
+// import persistReducer from 'redux-persist/es/persistReducer';
 // import storage from 'redux-persist/lib/storage';
 import { fetchContacts, addContact, deleteContact } from './operationsApi';
 
@@ -51,4 +51,4 @@ const contactsSlice = createSlice({
   },
 });
 
-export default contactsSlice.reducer;
+export const contactsReducer = contactsSlice.reducer;
