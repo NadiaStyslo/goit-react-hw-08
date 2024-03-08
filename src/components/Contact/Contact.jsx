@@ -1,6 +1,6 @@
 import css from './Contact.module.css';
 import { FaAddressBook, FaMobileAlt } from 'react-icons/fa';
-import { deleteContact } from '../../redux/contactSlice';
+import { deleteContact } from '../../redux/operationsApi';
 import { useDispatch } from 'react-redux';
 
 const Contact = ({ item }) => {
