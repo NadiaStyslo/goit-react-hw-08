@@ -1,13 +1,14 @@
 .contact {
-  display: flex;
-  flex-wrap: column;
-  gap: 20px;
-  /* margin: 25px; */
-  width: auto;
+  text-decoration: none;
   color: rgb(67, 7, 49);
 }
+.contact::marker {
+  content: '';
+}
 .book {
+  width: 250px;
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   border: 1px solid #8b8686;
   box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
@@ -15,8 +16,8 @@
 }
 .name {
   margin: 0;
-  font-size: 25px;
-  height: 40px;
+  font-size: 20px;
+  /* height: 40px; */
 }
 .button {
   margin-top: 10px;

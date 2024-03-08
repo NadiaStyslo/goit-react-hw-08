@@ -3,6 +3,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 25px;
 }
 .user {
   font-size: 25px;
