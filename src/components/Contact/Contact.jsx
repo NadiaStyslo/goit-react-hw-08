@@ -3,10 +3,10 @@ import { FaAddressBook, FaMobileAlt } from 'react-icons/fa';
 import { deleteContact } from '../../redux/operationsApi';
 import { useDispatch } from 'react-redux';
 
-const Contact = ({ item }) => {
+const Contact = ({ contact }) => {
   const dispatch = useDispatch();
-  const deleteId = () => {
-    dispatch(deleteContact(item.id));
+  const deleteId = (contactId) => {
+    dispatch(deleteContact(contactId));
   };
   return (
     <li className={css.contact}>
@@ -14,14 +14,14 @@ const Contact = ({ item }) => {
         <h2 className={css.name}>
           {' '}
           <FaAddressBook />
-          {item.name}
+          {contact.name}
         </h2>
         <h2 className={css.name}>
           {' '}
           <FaMobileAlt />
-          {item.number}
+          {contact.number}
         </h2>
-        <button onClick={deleteId} className={css.button}>
+        <button onClick={() => dispatch(deleteId(contact.id))} className={css.button}>
           Delete
         </button>
       </div>
