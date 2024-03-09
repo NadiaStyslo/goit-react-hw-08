@@ -5,8 +5,8 @@ import { useDispatch } from 'react-redux';
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
-  const deleteId = (contactId) => {
-    dispatch(deleteContact(contactId));
+  const deleteId = () => {
+    dispatch(deleteContact(contact.Id));
   };
   return (
     <li className={css.contact}>
@@ -21,7 +21,7 @@ const Contact = ({ contact }) => {
           <FaMobileAlt />
           {contact.phone}
         </h2>
-        <button onClick={() => dispatch(deleteId(contact.id))} className={css.button}>
+        <button onClick={deleteId} className={css.button}>
           Delete
         </button>
       </div>
