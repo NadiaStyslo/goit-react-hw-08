@@ -10,3 +10,8 @@
   outline: none;
   /* text-align: center; */
 }
+.page {
+  font-size: 20px;
+  color: rgb(43, 26, 119);
+  margin-left: 25px;
+}

@@ -39,4 +39,9 @@
   :hover {
     box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%), 0 4px 6px 0 rgb(93 100 148 / 20%);
   }
+  .error {
+    display: flex;
+    color: black;
+    margin-right: 15px;
+  }
 }

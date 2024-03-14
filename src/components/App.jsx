@@ -7,6 +7,7 @@ import { RestrictedRoute } from './RastrictedRoute';
 import { PrivateRoute } from './PriveteRoute';
 import { refreshUser } from '../redux/auth/operation';
 import { Layout } from './Layout';
+import ErrorPage404 from '../pages/ErrorPage';
 
 const Home = lazy(() => import('../pages/Home'));
 const Register = lazy(() => import('../pages/Register'));
@@ -41,6 +42,7 @@ const App = () => {
           element={<PrivateRoute redirectTo="/login" component={<Contact />} />}
         />
       </Route>
+      <Route path="*" element={<ErrorPage404 />} />
     </Routes>
   );
 };

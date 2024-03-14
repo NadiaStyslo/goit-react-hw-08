@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operation';
 import css from './LoginForm.module.css';
 // import css from './LoginForm.module.css';
+import toast from 'react-hot-toast';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -18,13 +19,13 @@ export const LoginForm = () => {
     )
       .unwrap()
       .then(() => {
-        console.log('login success');
+        toast.success('login success');
       })
       .catch(() => {
-        console.log('login error');
+        toast.error('Wrong login!');
       });
 
-    form.reset();
+    // form.reset();
   };
 
   return (
