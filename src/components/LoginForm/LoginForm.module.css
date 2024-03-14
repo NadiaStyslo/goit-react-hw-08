@@ -5,7 +5,7 @@
   color: rgb(146, 34, 113);
   margin: 25px;
   width: auto;
-
+  border: 1px solid #111;
   max-width: 400px;
 }
 

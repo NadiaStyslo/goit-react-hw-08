@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectError, selectLoading } from '../redux/selectors';
 import { fetchContacts } from '../redux/operationsApi';
-
+import css from './Contact.module.css';
 const Contact = () => {
   const dispatch = useDispatch();
   const loading = useSelector(selectLoading);
@@ -18,6 +18,7 @@ const Contact = () => {
   return (
     <div>
       <h1 className={css.title}>Phonebook</h1>
+
       <ContactForm />
       <SearchBox />
       {loading && !error && <b>loading...</b>}

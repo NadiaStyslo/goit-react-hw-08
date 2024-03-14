@@ -1,14 +1,11 @@
-import { Helmet } from 'react-helmet';
 import { Registration } from '../components/Registration/Registration';
-
-function loginIn() {
+import css from './Contact.module.css';
+function Register() {
   return (
     <div>
-      <Helmet>
-        <h1>Registration</h1>
-        <Registration />
-      </Helmet>
+      <h1 className={css.title}>Registration</h1>
+      <Registration />
     </div>
   );
 }
-export default loginIn;
+export default Register;

@@ -19,7 +19,7 @@ const Contact = ({ contact }) => {
         <h2 className={css.name}>
           {' '}
           <FaMobileAlt />
-          {contact.phone}
+          {contact.number}
         </h2>
         <button onClick={deleteId} className={css.button}>
           Delete

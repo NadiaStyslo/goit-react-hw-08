@@ -1,8 +1,11 @@
 import { useDispatch } from 'react-redux';
 import css from './Registration.module.css';
 import { register } from '../../redux/auth/operation';
-
+import { useId } from 'react';
 export const Registration = () => {
+  const nameId = useId();
+  const passwordId = useId();
+  const emailId = useId();
   const dispatch = useDispatch();
 
   const handleSumbit = (evt) => {
@@ -20,20 +23,26 @@ export const Registration = () => {
     form.reset();
   };
   return (
-    <form className={css.form} onSubmit={handleSumbit} autoComplete="off">
-      <label className={css.label}>
-        Username
-        <input type="text" name="name" />
-      </label>
-      <label className={css.label}>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label className={css.label}>
+    <form className={css.contact} onSubmit={handleSumbit} autoComplete="off">
+      <div>
+        <label htmlFor={nameId} className={css.name}>
+          Username
+          <input type="text" name="name" id={nameId} />
+        </label>
+      </div>
+      <div>
+        <label htmlFor={emailId} className={css.name}>
+          Email
+          <input type="email" name="email" id={emailId} />
+        </label>
+      </div>
+      <label htmlFor={passwordId} className={css.name}>
         Password
-        <input type="password" name="password" />
+        <input type="password" name="password" id={passwordId} />
       </label>
-      <button type="submit">Register</button>
+      <button className={css.button} type="submit">
+        Register
+      </button>
     </form>
   );
 };

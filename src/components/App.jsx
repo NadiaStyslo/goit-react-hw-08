@@ -25,20 +25,22 @@ const App = () => {
     <b>Refreshing user...</b>
   ) : (
     <Routes>
-      <Route path="/" element={<Layout />}></Route>
-      <Route index element={<Home />}></Route>
-      <Route
-        path="/register"
-        element={<RestrictedRoute redirectTo="/contacts" component={<Register />} />}
-      />
-      <Route
-        path="/login"
-        element={<RestrictedRoute redirectTo="/contacts" component={<Login />} />}
-      />
-      <Route
-        path="/contacts"
-        element={<PrivateRoute redirectTo="/login" component={<Contact />} />}
-      />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+
+        <Route
+          path="/register"
+          element={<RestrictedRoute redirectTo="/contacts" component={<Register />} />}
+        />
+        <Route
+          path="/login"
+          element={<RestrictedRoute redirectTo="/contacts" component={<Login />} />}
+        />
+        <Route
+          path="/contacts"
+          element={<PrivateRoute redirectTo="/login" component={<Contact />} />}
+        />
+      </Route>
     </Routes>
   );
 };
